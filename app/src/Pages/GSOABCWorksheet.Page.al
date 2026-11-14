@@ -1,6 +1,6 @@
 namespace GMSoft.ABCInventoryAnalysis;
 
-page 73033674 "GSO ABC Worksheet"
+page 73031399 "GSO ABC Worksheet"
 {
     PageType = Worksheet;
     SourceTable = "GSO ABC Preview Line";

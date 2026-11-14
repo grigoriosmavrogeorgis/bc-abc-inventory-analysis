@@ -3,7 +3,7 @@ namespace GMSoft.ABCInventoryAnalysis;
 using Microsoft.Inventory.Item;
 using Microsoft.Inventory.Ledger;
 
-report 73033673 "GSO ABC Exceptions"
+report 73031398 "GSO ABC Exceptions"
 {
     Caption = 'ABC Exception Report';
     UsageCategory = ReportsAndAnalysis;

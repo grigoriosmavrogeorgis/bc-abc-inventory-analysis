@@ -2,7 +2,7 @@ namespace GMSoft.ABCInventoryAnalysis;
 
 using Microsoft.Inventory.Item;
 
-report 73033671 "GSO ABC Item Movement"
+report 73031396 "GSO ABC Item Movement"
 {
     Caption = 'ABC Item Movement Report';
     UsageCategory = ReportsAndAnalysis;

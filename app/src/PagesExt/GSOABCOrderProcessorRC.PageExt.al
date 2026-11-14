@@ -2,7 +2,7 @@ namespace GMSoft.ABCInventoryAnalysis;
 
 using Microsoft.Sales.RoleCenters;
 
-pageextension 73033675 "GSO ABC Order Processor RC" extends "Order Processor Role Center"
+pageextension 73031400 "GSO ABC Order Processor RC" extends "Order Processor Role Center"
 {
     actions
     {

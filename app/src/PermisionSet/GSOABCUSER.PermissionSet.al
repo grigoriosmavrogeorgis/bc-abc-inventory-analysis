@@ -1,6 +1,6 @@
 namespace GMSoft.ABCInventoryAnalysis;
 
-permissionset 73033671 "GSO ABC USER"
+permissionset 73031396 "GSO ABC USER"
 {
     Assignable = true;
     Caption = 'ABC Inventory - User';

@@ -2,7 +2,7 @@ namespace GMSoft.ABCInventoryAnalysis;
 
 using Microsoft.Inventory.Item;
 
-table 73033675 "GSO ABC History Line"
+table 73031400 "GSO ABC History Line"
 {
     Caption = 'ABC History Line';
     Description = 'Stores detailed item-level ABC classification results from historical analysis runs';

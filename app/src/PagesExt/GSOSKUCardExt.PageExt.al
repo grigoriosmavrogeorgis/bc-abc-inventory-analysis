@@ -2,7 +2,7 @@ namespace GMSoft.ABCInventoryAnalysis;
 
 using Microsoft.Inventory.Location;
 
-pageextension 73033673 "GSO SKU Card Ext." extends "Stockkeeping Unit Card"
+pageextension 73031398 "GSO SKU Card Ext." extends "Stockkeeping Unit Card"
 {
     layout
     {

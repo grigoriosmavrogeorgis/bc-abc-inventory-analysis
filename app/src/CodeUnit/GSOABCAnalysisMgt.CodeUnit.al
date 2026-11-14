@@ -4,7 +4,7 @@ using Microsoft.Inventory.Item;
 using Microsoft.Inventory.Ledger;
 using Microsoft.Inventory.Location;
 
-codeunit 73033674 "GSO ABC Analysis Mgt."
+codeunit 73031399 "GSO ABC Analysis Mgt."
 {
     var
         NoLinesErr: Label 'There are no preview lines to apply. Run Calculate first.';

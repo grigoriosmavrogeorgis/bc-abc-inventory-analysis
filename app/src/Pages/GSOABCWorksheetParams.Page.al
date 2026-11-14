@@ -1,6 +1,6 @@
 namespace GMSoft.ABCInventoryAnalysis;
 
-page 73033675 "GSO ABC Worksheet Params"
+page 73031400 "GSO ABC Worksheet Params"
 {
     PageType = StandardDialog;
     ContextSensitiveHelpPage = 'worksheet';

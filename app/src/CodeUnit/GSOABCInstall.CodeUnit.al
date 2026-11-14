@@ -2,7 +2,7 @@ namespace GMSoft.ABCInventoryAnalysis;
 
 using System.Upgrade;
 
-codeunit 73033671 "GSO ABC Install"
+codeunit 73031396 "GSO ABC Install"
 {
     Subtype = Install;
 

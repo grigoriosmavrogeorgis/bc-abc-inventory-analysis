@@ -2,7 +2,7 @@
   "id": "fed0d995-8c8d-4fda-bd16-e10d112171fb",
   "name": "ABC Inventory Analysis",
   "publisher": "GMSOFT LIMITED",
-  "version": "1.29.1.1",
+  "version": "1.29.2.0",
   "brief": "ABC classification of items by revenue, profit, cost, usage, GMROII or pick frequency",
   "description": "Rank items with six ABC models, preview the result in a worksheet, and write the class to items and stockkeeping units. Drive physical inventory counting periods from the class. Free, no item limit.",
   "privacyStatement": "https://gmsoftdynamics.com/privacy-statement-eu/",
@@ -18,8 +18,8 @@
   "application": "29.0.0.0",
   "idRanges": [
     {
-      "from": 73033660,
-      "to": 73033689
+      "from": 73031395,
+      "to": 73031414
     }
   ],
   "features": [

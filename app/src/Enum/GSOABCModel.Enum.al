@@ -1,6 +1,6 @@
 namespace GMSoft.ABCInventoryAnalysis;
 
-enum 73033671 "GSO ABC Model"
+enum 73031396 "GSO ABC Model"
 {
     Extensible = false;
     Caption = 'ABC Model';

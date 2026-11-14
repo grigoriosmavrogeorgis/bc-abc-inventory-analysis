@@ -1,6 +1,6 @@
 namespace GMSoft.ABCInventoryAnalysis;
 
-table 73033670 "GSO ABC Analysis Setup"
+table 73031395 "GSO ABC Analysis Setup"
 {
     Caption = 'ABC Analysis Setup';
     Description = 'Stores configuration settings for ABC inventory classification analysis including thresholds, lookback periods, and model-specific parameters';

@@ -2,7 +2,7 @@ namespace GMSoft.ABCInventoryAnalysis;
 
 using Microsoft.Inventory.Item;
 
-report 73033674 "GSO ABC Comparison"
+report 73031399 "GSO ABC Comparison"
 {
     Caption = 'ABC Multi-Model Comparison';
     UsageCategory = ReportsAndAnalysis;

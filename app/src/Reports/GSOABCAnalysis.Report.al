@@ -1,6 +1,6 @@
 namespace GMSoft.ABCInventoryAnalysis;
 
-report 73033672 "GSO ABC Analysis"
+report 73031397 "GSO ABC Analysis"
 {
     UsageCategory = ReportsAndAnalysis;
     ApplicationArea = All;

@@ -1,6 +1,6 @@
 namespace GMSoft.ABCInventoryAnalysis;
 
-page 73033671 "GSO ABC Counting Policy List"
+page 73031396 "GSO ABC Counting Policy List"
 {
     ContextSensitiveHelpPage = 'counting-policies';
     Caption = 'ABC Counting Policies';

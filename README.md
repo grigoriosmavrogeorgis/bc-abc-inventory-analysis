@@ -4,7 +4,7 @@ Free ABC classification for Microsoft Dynamics 365 Business Central. Rank items 
 
 - **Publisher:** GMSOFT LIMITED
 - **App ID:** `fed0d995-8c8d-4fda-bd16-e10d112171fb`
-- **Object range:** 73033660 to 73033689, prefix `GSO`
+- **Object range:** 73031395 to 73031414, prefix `GSO`
 - **Platform:** Business Central 29 and later, cloud
 - **Languages:** English, French, German, Greek, Italian, Spanish
 - **Help:** https://gmsoftdynamics.com/apps/free/abc-inventory-analysis/docs/

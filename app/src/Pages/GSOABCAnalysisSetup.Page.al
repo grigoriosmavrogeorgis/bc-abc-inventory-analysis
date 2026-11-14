@@ -1,6 +1,6 @@
 namespace GMSoft.ABCInventoryAnalysis;
 
-page 73033670 "GSO ABC Analysis Setup"
+page 73031395 "GSO ABC Analysis Setup"
 {
     ContextSensitiveHelpPage = 'setup';
     Caption = 'ABC Analysis Setup';

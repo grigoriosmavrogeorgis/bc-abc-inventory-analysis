@@ -1,6 +1,6 @@
 namespace GMSoft.ABCInventoryAnalysis;
 
-page 73033677 "GSO ABC History"
+page 73031402 "GSO ABC History"
 {
     ContextSensitiveHelpPage = 'history';
     Caption = 'ABC History';

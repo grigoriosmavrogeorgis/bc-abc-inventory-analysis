@@ -6,7 +6,7 @@ namespace GMSoft.ABCInventoryAnalysis;
 /// Event IDs: ABC-00xx (unique across GMSOFT apps, which share one Application Insights resource).
 /// Custom dimensions carry counts, codes, versions and flags only.
 /// </summary>
-codeunit 73033673 "GSO ABC Telemetry"
+codeunit 73031398 "GSO ABC Telemetry"
 {
     Access = Public;
 

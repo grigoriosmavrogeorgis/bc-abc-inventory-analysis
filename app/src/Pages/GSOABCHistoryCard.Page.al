@@ -2,7 +2,7 @@ namespace GMSoft.ABCInventoryAnalysis;
 
 using System.IO;
 
-page 73033679 "GSO ABC History Card"
+page 73031404 "GSO ABC History Card"
 {
     ContextSensitiveHelpPage = 'history';
     Caption = 'ABC History';

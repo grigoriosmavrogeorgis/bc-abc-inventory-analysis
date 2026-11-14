@@ -2,7 +2,7 @@ namespace GMSoft.ABCInventoryAnalysis;
 
 using System.Upgrade;
 
-codeunit 73033678 "GSO ABC Upgrade Tags"
+codeunit 73031403 "GSO ABC Upgrade Tags"
 {
     Access = Internal;
     InherentPermissions = X;

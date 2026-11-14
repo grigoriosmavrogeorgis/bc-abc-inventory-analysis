@@ -1,6 +1,6 @@
 namespace GMSoft.ABCInventoryAnalysis;
 
-page 73033676 "GSO ABC Stats Part"
+page 73031401 "GSO ABC Stats Part"
 {
     ContextSensitiveHelpPage = 'worksheet';
     Caption = 'ABC Statistics';

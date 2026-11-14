@@ -2,7 +2,7 @@ namespace GMSoft.ABCInventoryAnalysis;
 
 using Microsoft.Warehouse.RoleCenters;
 
-pageextension 73033672 "GSO ABC Inventory Manager RC" extends "Whse. Basic Role Center"
+pageextension 73031397 "GSO ABC Inventory Manager RC" extends "Whse. Basic Role Center"
 {
     actions
     {

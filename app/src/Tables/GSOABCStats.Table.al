@@ -1,6 +1,6 @@
 namespace GMSoft.ABCInventoryAnalysis;
 
-table 73033676 "GSO ABC Stats"
+table 73031401 "GSO ABC Stats"
 {
     Caption = 'ABC Stats';
     Description = 'Temporary table for calculating and displaying statistical summaries of ABC classification distribution';

@@ -2,7 +2,7 @@ namespace GMSoft.ABCInventoryAnalysis;
 
 using Microsoft.Inventory.Item;
 
-pageextension 73033671 "GSO Item List Ext." extends "Item List"
+pageextension 73031396 "GSO Item List Ext." extends "Item List"
 {
     layout
     {

@@ -2,7 +2,7 @@ namespace GMSoft.ABCInventoryAnalysis;
 
 using System.Threading;
 
-codeunit 73033672 "GSO ABC Job Queue Helper"
+codeunit 73031397 "GSO ABC Job Queue Helper"
 {
     var
         JobDescriptionLbl: Label 'ABC Inventory Analysis - Recalculation';

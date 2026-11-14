@@ -2,7 +2,7 @@ namespace GMSoft.ABCInventoryAnalysis;
 
 using Microsoft.Finance.RoleCenters;
 
-pageextension 73033674 "GSO ABC Business Manager RC" extends "Business Manager Role Center"
+pageextension 73031399 "GSO ABC Business Manager RC" extends "Business Manager Role Center"
 {
     actions
     {

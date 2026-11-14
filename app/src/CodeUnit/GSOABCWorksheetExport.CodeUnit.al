@@ -2,7 +2,7 @@ namespace GMSoft.ABCInventoryAnalysis;
 
 using System.IO;
 
-codeunit 73033675 "GSO ABC Worksheet Export"
+codeunit 73031400 "GSO ABC Worksheet Export"
 {
     var
         BookNameLbl: Label 'ABC Preview';
