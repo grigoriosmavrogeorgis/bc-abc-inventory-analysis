@@ -23,6 +23,10 @@ First release of **ABC Inventory Analysis** as a free app, replacing the paid AB
 ### Fixed
 
 - A value entry posting could trigger a full recalculation of all models
+- Usage Value counted a sales return as extra usage; returns now reduce it
+- An A threshold above the B threshold was accepted, so no item could become class B
+- ABC Inventory Analysis report listed items by item number instead of by value
+- Detail by Class ignored a filter on Item No.
 - Class Distribution report showed each class under the wrong label
 - Exceptions and Comparison reports flagged almost every item as inconsistent
 - Items without activity kept their previous class forever

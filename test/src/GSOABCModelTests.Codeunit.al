@@ -42,6 +42,23 @@ codeunit 50001 "GSO ABC Model Tests"
     end;
 
     [Test]
+    procedure UsageValueIsReducedByAReturn()
+    var
+        ItemNo: Code[20];
+    begin
+        // [GIVEN] Three units in stock at 100 each; two are sold and one of them is returned
+        Initialize();
+        ItemNo := Lib.CreateItem(100);
+        Lib.PostEntry(ItemNo, Enum::"Item Ledger Entry Type"::"Positive Adjmt.", 3, 100);
+        Lib.PostEntry(ItemNo, Enum::"Item Ledger Entry Type"::Sale, 2, 900);
+        Lib.PostEntry(ItemNo, Enum::"Item Ledger Entry Type"::Sale, -1, 900);
+
+        // [WHEN] [THEN] The Usage Value is the cost of the one unit that stayed out; COGS does not deduct the return
+        Assert.AreEqual(100, Mgt.CalcItemValue(Enum::"GSO ABC Model"::"Usage Value", Lib.GetTestDate(), Lib.GetTestDate(), ItemNo), 'Usage value after a return');
+        Assert.AreEqual(200, Mgt.CalcItemValue(Enum::"GSO ABC Model"::COGS, Lib.GetTestDate(), Lib.GetTestDate(), ItemNo), 'COGS after a return');
+    end;
+
+    [Test]
     procedure GMROIIIsMarginOverInventoryValue()
     var
         ItemNo: Code[20];
@@ -367,6 +384,55 @@ codeunit 50001 "GSO ABC Model Tests"
         Assert.IsTrue(StoredSetup."Zero Consumption as D", 'Class D by default');
         Assert.AreEqual('DEFAULT', StoredSetup."Counting Code Mapping ID", 'Default counting policy code');
         Assert.AreNotEqual('', StoredSetup."Last Upgraded To", 'Installed version');
+    end;
+
+    [Test]
+    procedure AThresholdAboveBThresholdIsRejected()
+    var
+        Setup: Record "GSO ABC Analysis Setup";
+        SetupRef: RecordRef;
+        AFieldNo: List of [Integer];
+        FieldNo: Integer;
+    begin
+        // [GIVEN] The default thresholds A 80 % and B 95 % for every model
+        Initialize();
+        Mgt.EnsureSetup(Setup);
+        AFieldNo.Add(Setup.FieldNo("Rev A %"));
+        AFieldNo.Add(Setup.FieldNo("GP A %"));
+        AFieldNo.Add(Setup.FieldNo("COGS A %"));
+        AFieldNo.Add(Setup.FieldNo("Usage Value A %"));
+        AFieldNo.Add(Setup.FieldNo("GMROII A %"));
+        AFieldNo.Add(Setup.FieldNo("Pick Freq A %"));
+
+        foreach FieldNo in AFieldNo do begin
+            // [WHEN] The A threshold of a model is set above its B threshold
+            SetupRef.GetTable(Setup);
+            asserterror SetupRef.Field(FieldNo).Validate(96);
+
+            // [THEN] The value is rejected, because no item could be class B
+            Assert.ExpectedError('must not be higher than the B threshold');
+        end;
+    end;
+
+    [Test]
+    procedure BThresholdBelowAThresholdIsRejected()
+    var
+        Setup: Record "GSO ABC Analysis Setup";
+    begin
+        // [GIVEN] The default thresholds A 80 % and B 95 %
+        Initialize();
+        Mgt.EnsureSetup(Setup);
+
+        // [WHEN] The B threshold is set below the A threshold
+        asserterror Setup.Validate("Pick Freq B %", 70);
+
+        // [THEN] The value is rejected
+        Assert.ExpectedError('must not be higher than the B threshold');
+
+        // [WHEN] [THEN] Equal thresholds and A below B are accepted
+        Mgt.EnsureSetup(Setup);
+        Setup.Validate("Pick Freq B %", 80);
+        Setup.Validate("Pick Freq A %", 60);
     end;
 
     [Test]

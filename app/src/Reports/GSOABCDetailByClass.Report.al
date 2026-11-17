@@ -156,7 +156,10 @@ report 73033675 "GSO ABC Detail by Class"
         if ItemFilterView = '' then
             exit(true);
         FilteredItem.SetView(ItemFilterView);
+        // Separate filter group, so a request page filter on "No." is kept and not overwritten
+        FilteredItem.FilterGroup(2);
         FilteredItem.SetRange("No.", ItemNo);
+        FilteredItem.FilterGroup(0);
         exit(not FilteredItem.IsEmpty());
     end;
 

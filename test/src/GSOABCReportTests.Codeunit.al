@@ -384,6 +384,8 @@ codeunit 50003 "GSO ABC Report Tests"
         OutStr: OutStream;
         InStr: InStream;
     begin
+        // A request page cannot open inside a write transaction. The test runner still rolls everything back.
+        Commit();
         Parameters := Report.RunRequestPage(ReportId);
         TempBlob.CreateOutStream(OutStr);
         Report.SaveAs(ReportId, Parameters, ReportFormat::Xml, OutStr);
