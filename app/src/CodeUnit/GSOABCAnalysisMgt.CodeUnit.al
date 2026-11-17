@@ -277,16 +277,19 @@ codeunit 73033674 "GSO ABC Analysis Mgt."
                             ValueEntry.CalcSums("Sales Amount (Actual)", "Cost Amount (Actual)");
                             exit(ValueEntry."Sales Amount (Actual)" + ValueEntry."Cost Amount (Actual)"); // cost is negative
                         end;
+                    Model::"Usage Value":
+                        begin
+                            // Net cost of what left stock, as a positive number. Returns and cost corrections reduce it.
+                            ValueEntry.CalcSums("Cost Amount (Actual)");
+                            exit(-ValueEntry."Cost Amount (Actual)");
+                        end;
                     else begin
-                        // COGS and Usage Value: outbound cost as a positive number
+                        // COGS: outbound cost as a positive number. Returns are not deducted.
                         if ValueEntry.FindSet() then
                             repeat
                                 Cost := ValueEntry."Cost Amount (Actual)";
                                 if Cost < 0 then
-                                    Amount += -Cost
-                                else
-                                    if Model = Model::"Usage Value" then
-                                        Amount += Cost;
+                                    Amount += -Cost;
                             until ValueEntry.Next() = 0;
                         exit(Amount);
                     end;

@@ -9,6 +9,12 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table GSO ABC Analysis Setup - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 297272394 - NamedType 3958593792" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The A threshold (%1 %) must not be higher than the B threshold (%2 %).</source>
+          <target state="translated">Le seuil A (%1 %) ne doit pas être supérieur au seuil B (%2 %).</target>
+          <note from="Developer" annotates="general" priority="2">%1 = A threshold percentage, %2 = B threshold percentage</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table GSO ABC Analysis Setup - NamedType ThresholdOrderErr</note>
+        </trans-unit>
         <trans-unit id="Table 297272394 - Field 202926424 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>COGS A Threshold %</source>
           <target state="translated">% seuil A COGS</target>

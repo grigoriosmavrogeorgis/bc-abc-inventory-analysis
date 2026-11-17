@@ -17,28 +17,28 @@ table 73033670 "GSO ABC Analysis Setup"
         field(70; "Last Upgraded To"; Text[30]) { Caption = 'Installed Version'; Editable = false; }
 
         // Per-model thresholds and periods
-        field(100; "Rev A %"; Decimal) { Caption = 'Revenue A Threshold %'; DecimalPlaces = 0 : 2; MinValue = 0; MaxValue = 100; InitValue = 80; }
-        field(101; "Rev B %"; Decimal) { Caption = 'Revenue B Threshold %'; DecimalPlaces = 0 : 2; MinValue = 0; MaxValue = 100; InitValue = 95; }
+        field(100; "Rev A %"; Decimal) { Caption = 'Revenue A Threshold %'; DecimalPlaces = 0 : 2; MinValue = 0; MaxValue = 100; InitValue = 80; trigger OnValidate() begin CheckThresholdOrder("Rev A %", "Rev B %"); end; }
+        field(101; "Rev B %"; Decimal) { Caption = 'Revenue B Threshold %'; DecimalPlaces = 0 : 2; MinValue = 0; MaxValue = 100; InitValue = 95; trigger OnValidate() begin CheckThresholdOrder("Rev A %", "Rev B %"); end; }
         field(102; "Rev Period (Days)"; Integer) { Caption = 'Revenue Period (Days)'; InitValue = 365; MinValue = 1; }
 
-        field(110; "GP A %"; Decimal) { Caption = 'Gross Profit A Threshold %'; DecimalPlaces = 0 : 2; MinValue = 0; MaxValue = 100; InitValue = 80; }
-        field(111; "GP B %"; Decimal) { Caption = 'Gross Profit B Threshold %'; DecimalPlaces = 0 : 2; MinValue = 0; MaxValue = 100; InitValue = 95; }
+        field(110; "GP A %"; Decimal) { Caption = 'Gross Profit A Threshold %'; DecimalPlaces = 0 : 2; MinValue = 0; MaxValue = 100; InitValue = 80; trigger OnValidate() begin CheckThresholdOrder("GP A %", "GP B %"); end; }
+        field(111; "GP B %"; Decimal) { Caption = 'Gross Profit B Threshold %'; DecimalPlaces = 0 : 2; MinValue = 0; MaxValue = 100; InitValue = 95; trigger OnValidate() begin CheckThresholdOrder("GP A %", "GP B %"); end; }
         field(112; "GP Period (Days)"; Integer) { Caption = 'Gross Profit Period (Days)'; InitValue = 365; MinValue = 1; }
 
-        field(120; "COGS A %"; Decimal) { Caption = 'COGS A Threshold %'; DecimalPlaces = 0 : 2; MinValue = 0; MaxValue = 100; InitValue = 80; }
-        field(121; "COGS B %"; Decimal) { Caption = 'COGS B Threshold %'; DecimalPlaces = 0 : 2; MinValue = 0; MaxValue = 100; InitValue = 95; }
+        field(120; "COGS A %"; Decimal) { Caption = 'COGS A Threshold %'; DecimalPlaces = 0 : 2; MinValue = 0; MaxValue = 100; InitValue = 80; trigger OnValidate() begin CheckThresholdOrder("COGS A %", "COGS B %"); end; }
+        field(121; "COGS B %"; Decimal) { Caption = 'COGS B Threshold %'; DecimalPlaces = 0 : 2; MinValue = 0; MaxValue = 100; InitValue = 95; trigger OnValidate() begin CheckThresholdOrder("COGS A %", "COGS B %"); end; }
         field(122; "COGS Period (Days)"; Integer) { Caption = 'COGS Period (Days)'; InitValue = 365; MinValue = 1; }
 
-        field(128; "Usage Value A %"; Decimal) { Caption = 'Usage Value A Threshold %'; DecimalPlaces = 0 : 2; MinValue = 0; MaxValue = 100; InitValue = 80; }
-        field(129; "Usage Value B %"; Decimal) { Caption = 'Usage Value B Threshold %'; DecimalPlaces = 0 : 2; MinValue = 0; MaxValue = 100; InitValue = 95; }
+        field(128; "Usage Value A %"; Decimal) { Caption = 'Usage Value A Threshold %'; DecimalPlaces = 0 : 2; MinValue = 0; MaxValue = 100; InitValue = 80; trigger OnValidate() begin CheckThresholdOrder("Usage Value A %", "Usage Value B %"); end; }
+        field(129; "Usage Value B %"; Decimal) { Caption = 'Usage Value B Threshold %'; DecimalPlaces = 0 : 2; MinValue = 0; MaxValue = 100; InitValue = 95; trigger OnValidate() begin CheckThresholdOrder("Usage Value A %", "Usage Value B %"); end; }
         field(135; "Usage Value Period (Days)"; Integer) { Caption = 'Usage Value Period (Days)'; InitValue = 365; MinValue = 1; }
 
-        field(136; "GMROII A %"; Decimal) { Caption = 'GMROII A Threshold %'; DecimalPlaces = 0 : 2; MinValue = 0; MaxValue = 100; InitValue = 80; }
-        field(137; "GMROII B %"; Decimal) { Caption = 'GMROII B Threshold %'; DecimalPlaces = 0 : 2; MinValue = 0; MaxValue = 100; InitValue = 95; }
+        field(136; "GMROII A %"; Decimal) { Caption = 'GMROII A Threshold %'; DecimalPlaces = 0 : 2; MinValue = 0; MaxValue = 100; InitValue = 80; trigger OnValidate() begin CheckThresholdOrder("GMROII A %", "GMROII B %"); end; }
+        field(137; "GMROII B %"; Decimal) { Caption = 'GMROII B Threshold %'; DecimalPlaces = 0 : 2; MinValue = 0; MaxValue = 100; InitValue = 95; trigger OnValidate() begin CheckThresholdOrder("GMROII A %", "GMROII B %"); end; }
         field(138; "GMROII Period (Days)"; Integer) { Caption = 'GMROII Period (Days)'; InitValue = 365; MinValue = 1; }
 
-        field(139; "Pick Freq A %"; Decimal) { Caption = 'Pick Frequency A Threshold %'; DecimalPlaces = 0 : 2; MinValue = 0; MaxValue = 100; InitValue = 80; }
-        field(140; "Pick Freq B %"; Decimal) { Caption = 'Pick Frequency B Threshold %'; DecimalPlaces = 0 : 2; MinValue = 0; MaxValue = 100; InitValue = 95; }
+        field(139; "Pick Freq A %"; Decimal) { Caption = 'Pick Frequency A Threshold %'; DecimalPlaces = 0 : 2; MinValue = 0; MaxValue = 100; InitValue = 80; trigger OnValidate() begin CheckThresholdOrder("Pick Freq A %", "Pick Freq B %"); end; }
+        field(140; "Pick Freq B %"; Decimal) { Caption = 'Pick Frequency B Threshold %'; DecimalPlaces = 0 : 2; MinValue = 0; MaxValue = 100; InitValue = 95; trigger OnValidate() begin CheckThresholdOrder("Pick Freq A %", "Pick Freq B %"); end; }
         field(141; "Pick Freq Period (Days)"; Integer) { Caption = 'Pick Frequency Period (Days)'; InitValue = 365; MinValue = 1; }
 
         // Counting policy
@@ -52,4 +52,13 @@ table 73033670 "GSO ABC Analysis Setup"
         }
     }
     keys { key(PK; "Primary Key") { Clustered = true; } }
+
+    var
+        ThresholdOrderErr: Label 'The A threshold (%1 %) must not be higher than the B threshold (%2 %).', Comment = '%1 = A threshold percentage, %2 = B threshold percentage';
+
+    local procedure CheckThresholdOrder(AThreshold: Decimal; BThreshold: Decimal)
+    begin
+        if AThreshold > BThreshold then
+            Error(ThresholdOrderErr, AThreshold, BThreshold);
+    end;
 }

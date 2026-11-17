@@ -33,6 +33,9 @@ report 73033672 "GSO ABC Analysis"
                 Mgt: Codeunit "GSO ABC Analysis Mgt.";
             begin
                 Mgt.CalculatePreview(SelectedModel, StartDate, EndDate, PreviewABC);
+                // CalculatePreview resets the sorting; list the highest value first again
+                PreviewABC.SetCurrentKey(Value);
+                PreviewABC.Ascending(false);
             end;
         }
     }
