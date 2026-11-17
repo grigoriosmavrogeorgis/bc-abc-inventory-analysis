@@ -470,7 +470,7 @@ codeunit 50000 "GSO ABC Analysis Tests"
         TempPreview."Line No." := LineNo + 10000;
         TempPreview.Value := Value;
         TempPreview.Class := Class;
-        TempPreview.Insert();
+        TempPreview.Insert(false);
     end;
 
     local procedure VerifyPreviewLine(var TempPreview: Record "GSO ABC Preview Line" temporary; ItemNo: Code[20]; ExpectedValue: Decimal; ExpectedValuePct: Decimal; ExpectedCumPct: Decimal; ExpectedClass: Enum "GSO ABC Class")

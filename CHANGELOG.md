@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.29.1.1
+## 1.29.3.0
 
 First release of **ABC Inventory Analysis** as a free app, replacing the paid ABC Inventory Optimizer listing. New app ID, so it installs side by side with the old app and does not migrate its data.
 
